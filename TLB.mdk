@@ -1,0 +1,87 @@
+[INCLUDE=presentation]
+Title         : 知识分享
+Sub Title     : Translation lookaside buffer
+Author        : 崔利伟
+Affiliation   : 电子科技大学
+Email         : cui@hellolw.com
+Reveal Theme  : sky
+Beamer Theme  : singapore
+Package       : [UTF8]ctex
+
+[TITLE]
+
+# Section one: 简要回顾
+
+# Architecture:冯诺伊曼体系
+~ Figure { #fig-figure; caption:"Von Neumann Architecture"}
+![Von_Neumann_architecture]
+~
+
+[Von_Neumann_architecture]: images/Von_Neumann_architecture.svg "Von_Neumann_architecture" { width:auto; max-width:110% }
+
+# Why:为什么需要缓存？
+~ Figure { #fig-figure; caption:"储存器山"}
+![hierarchy]
+~
+
+[hierarchy]: images/hierarchy.png "hierarchy" { width:auto; max-width:80% }
+
+
+# Answer:慢
+~ Center
+凡是位于速度相差较大的两种硬件之间，如果使用一个协调两者数据传输速度差异的结构，能实现加速
+~
+
+~ Figure { #fig-figure; caption:"缓存体系"}
+![cahce]
+~
+
+[cahce]: images/cahce.png "cahce" { width:auto; max-width:90% }
+
+
+# Condition:出现前提
+~ Center
+我们采用了分页技术
+~
+
+~ Figure { #fig-figure; caption:"Assignment of Process to Free Frames"}
+![Free]
+~
+
+[Free]: images/Free.png "Free" { width:auto; max-width:90% }
+
+
+# Challenge:分页虽好...
+
+
+# Conclusion:所以...
+1. 我们可以用ZigBee 来采样
+* 使用网关来协助ZigBee 分出不同的AP
+* 通过算法来修正其中的错误
+* **最终获得信号强度分布图**
+
+
+# Section two: 具体设计
+
+~ Begin Vertical
+# Step by Step: 具体实现
+1. {.fragment}**用户**向**网关**发送请求，**网关**向**ZigBee**广播需要监听的频道
+* {.fragment}**ZigBee**开始对要监听的信道采样
+* {.fragment}**网关**嗅探该信道并获取一系列WiFi帧，之后向**ZigBee**广播每个**接入点**的特征序列
+*  {.fragment}**ZigBee**通过比对分离，计算出每个**接入点**的信号强度并送回**网关**
+* {.fragment}**网关**汇总结果并返回**用户**
+
+# architecture:具体架构
+~ Figure { #fig-figure; caption:"Architecture"}
+![2016-05-29 19:50:40屏幕截图]
+~
+
+[2016-05-29 19:50:40屏幕截图]: images/2016-05-29-19-50-40-.png "2016-05-29 19:50:40屏幕截图" { width:auto; max-width:90% }
+~ End Vertical
+
+
+~ Begin Vertical 
+
+~ End Vertical
+
+# Thanks for looking! :-)
