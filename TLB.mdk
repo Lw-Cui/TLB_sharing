@@ -24,7 +24,7 @@ Package       : [UTF8]ctex
 ![hierarchy]
 ~
 
-[hierarchy]: images/hierarchy.png "hierarchy" { width:auto; max-width:80% }
+[hierarchy]: images/hierarchy.png "hierarchy" { width:auto; max-width:60% }
 
 
 # Answer:慢
@@ -36,10 +36,10 @@ Package       : [UTF8]ctex
 ![cahce]
 ~
 
-[cahce]: images/cahce.png "cahce" { width:auto; max-width:90% }
+[cahce]: images/cahce.png "cahce" { width:auto; max-width:70% }
 
 
-# Condition:出现前提
+# How:如何提升内存使用效率？
 ~ Center
 我们采用了分页技术
 ~
@@ -48,40 +48,57 @@ Package       : [UTF8]ctex
 ![Free]
 ~
 
-[Free]: images/Free.png "Free" { width:auto; max-width:90% }
+[Free]: images/Free.png "Free" { width:auto; max-width:70% }
 
+~ Begin Vertical 
 
 # Challenge:分页虽好...
+~ Center
+分页系统中的地址翻译需要两次内存访问
+~
+~ Figure { #fig-figure; caption:"地址翻译"}
+![translation]
+~
 
 
-# Conclusion:所以...
-1. 我们可以用ZigBee 来采样
-* 使用网关来协助ZigBee 分出不同的AP
-* 通过算法来修正其中的错误
-* **最终获得信号强度分布图**
+[translation]: images/translation.png "translation" { width:auto; max-width:70% }
+
+# Costly:甚至更多
+~ Figure { #fig-figure; caption:"IA-32 地址翻译"}
+![data]
+~
+
+[data]: images/data.png "data" { width:auto; max-width:90% }
+
+# IA-32e:以至于...
+~ Center
+需要非常多的内存访问
+~
+
+~ Figure { #fig-figure; caption:"64bit 系统的地址翻译"}
+![ia32e]
+~
+
+
+[ia32e]: images/ia32e.png "ia32e" { width:auto; max-width:90% }
+
+~ End Vertical
+
+# Pipeline: 影响性能
+~ Center
+流水线各段时间应尽量相等，避免段延时过长造成的互相等待
+~
+~ Figure { #fig-figure; caption:"流水段"}
+![pipline]
+~
+
+[pipline]: images/pipline.png "pipline" { width:auto; max-width:70% }
+
+# TLB:救世主！
+
 
 
 # Section two: 具体设计
 
-~ Begin Vertical
-# Step by Step: 具体实现
-1. {.fragment}**用户**向**网关**发送请求，**网关**向**ZigBee**广播需要监听的频道
-* {.fragment}**ZigBee**开始对要监听的信道采样
-* {.fragment}**网关**嗅探该信道并获取一系列WiFi帧，之后向**ZigBee**广播每个**接入点**的特征序列
-*  {.fragment}**ZigBee**通过比对分离，计算出每个**接入点**的信号强度并送回**网关**
-* {.fragment}**网关**汇总结果并返回**用户**
-
-# architecture:具体架构
-~ Figure { #fig-figure; caption:"Architecture"}
-![2016-05-29 19:50:40屏幕截图]
-~
-
-[2016-05-29 19:50:40屏幕截图]: images/2016-05-29-19-50-40-.png "2016-05-29 19:50:40屏幕截图" { width:auto; max-width:90% }
-~ End Vertical
-
-
-~ Begin Vertical 
-
-~ End Vertical
 
 # Thanks for looking! :-)
