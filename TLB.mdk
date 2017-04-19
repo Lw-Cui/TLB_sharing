@@ -98,6 +98,13 @@ Package       : [UTF8]ctex
 # Section Two: 页表缓存
 
 # TLB:救世主！
+~ Figure { #fig-figure; caption:"TLB 的位置"}
+![Page_table_actions]
+~
+
+[Page_table_actions]: images/Page_table_actions.svg "Page_table_actions" { width:auto; max-width:90% }
+
+# Detail:具体工作
 ~ Figure { #fig-figure; caption:"Use of a Translation Lookaside Buffer"}
 ![tlb]
 ~
@@ -112,6 +119,8 @@ Package       : [UTF8]ctex
 ~
 
 [operation]: images/operation.png "operation" { width:auto; max-width:60% }
+
+# Section Three: 细节问题
 ~ Begin Vertical 
 # Page Table:直接映射
 ~ Center
@@ -136,4 +145,44 @@ Package       : [UTF8]ctex
 
 ~ End Vertical
 
+~ Begin Vertical 
+# Replacement Policy:哪家强?
+* Optimal
+* Least recently used (LRU)   
+* First-in-first-out (FIFO)
+* Clock
+
+# LRU: 最近最少使用
+~ Figure { #fig-figure; caption:"LRU replacement Algorithm"}
+![LRU]
+~
+
+[LRU]: images/LRU.png "LRU" { width:auto; max-width:90% }
+
+~ End Vertical
+
+# Section Four:总结
+~ Begin Vertical 
+# Mem + TLB
+~ Center
+![TLB]
+~
+
+[TLB]: images/TLB.png "TLB" { width:auto; max-width:90% }
+
+# Cache
+~ Center
+![cache]
+~
+
+[cache]: images/cache.png "cache" { width:auto; max-width:90% }
+~ End Vertical
+
 # Thanks for looking! :-)
+
+# References
+* Intel 64 and IA-32 Architectures Software Developer Manuals
+* Operating Systems: Internals and Design Principles
+* Computer Architecture: A Quantitative Approach
+* Wikipedia
+* 计算机组成与系统结构
