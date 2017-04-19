@@ -93,8 +93,7 @@ Package       : [UTF8]ctex
 ![pipeline]
 ~
 
-[pipeline]: images/pipeline.jpg "pipeline" { width:auto; max-width:70% }
-
+[pipeline]: images/pipeline.png "pipeline" { width:auto; max-width:80% }
 
 
 # Section Two: 页表缓存
