@@ -89,10 +89,12 @@ Package       : [UTF8]ctex
 流水线各段时间应尽量相等，避免段延时过长造成的互相等待
 ~
 ~ Figure { #fig-figure; caption:"流水段"}
-![pipline]
+
+![pipeline]
 ~
 
-[pipline]: images/pipline.png "pipline" { width:auto; max-width:70% }
+[pipeline]: images/pipeline.jpg "pipeline" { width:auto; max-width:70% }
+
 
 
 # Section Two: 页表缓存
@@ -106,11 +108,11 @@ Package       : [UTF8]ctex
 
 # Detail:具体工作
 ~ Figure { #fig-figure; caption:"Use of a Translation Lookaside Buffer"}
-![tlb]
+![detail]
 ~
 
+[detail]: images/detail.png "detail" { width:auto; max-width:70% }
 
-[tlb]: images/tlb.png "tlb" { width:auto; max-width:70% }
 
 # flowchart:如何做
 
@@ -168,7 +170,7 @@ Package       : [UTF8]ctex
 ![TLB]
 ~
 
-[TLB]: images/TLB.png "TLB" { width:auto; max-width:90% }
+[TLB]: images/TLB.png "TLB" { width:auto; max-width:80% }
 
 # Cache
 ~ Center
