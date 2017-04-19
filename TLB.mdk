@@ -94,11 +94,46 @@ Package       : [UTF8]ctex
 
 [pipline]: images/pipline.png "pipline" { width:auto; max-width:70% }
 
+
+# Section Two: 页表缓存
+
 # TLB:救世主！
+~ Figure { #fig-figure; caption:"Use of a Translation Lookaside Buffer"}
+![tlb]
+~
 
 
+[tlb]: images/tlb.png "tlb" { width:auto; max-width:70% }
 
-# Section two: 具体设计
+# flowchart:如何做
 
+~ Center
+![operation]
+~
+
+[operation]: images/operation.png "operation" { width:auto; max-width:60% }
+~ Begin Vertical 
+# Page Table:直接映射
+~ Center
+我们可以直接使用 Page Number 作为页表的索引。
+
+但在TLB 中我们也可以这么做么？
+~
+~ Center
+![pt]
+~
+
+
+[pt]: images/pt.png "pt" { width:auto; max-width:40% }
+
+# TLB Index:相连映射
+~ Center
+![am]
+~
+
+[am]: images/am.png "am" { width:auto; max-width:60% }
+
+
+~ End Vertical
 
 # Thanks for looking! :-)
